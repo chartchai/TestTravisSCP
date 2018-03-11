@@ -1,8 +1,8 @@
 language: node_js
 before_install: 
   - openssl aes-256-cbc -k "$super_secret_password" -in se234.pem.enc -out se234.pem -d
+install:
 script:
-
 after_success: scp -i "se234.pem" ./code/**/**.* ubuntu@54.255.174.42:/var/www/html/
 env:
   global:
