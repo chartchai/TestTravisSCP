@@ -2,5 +2,4 @@ language: node_js
 before_install:
 - openssl aes-256-cbc -K $encrypted_788dee6f42b1_key -iv $encrypted_788dee6f42b1_iv
   -in se234.pem.enc -out se234.pem -d
-after_success:
-  scp -i "se234.pem" ./code/**/**.* ubuntu@54.255.174.42:/var/www/html/
+after_success: scp -i "se234.pem" ./code/**/**.* ubuntu@54.255.174.42:/var/www/html/
